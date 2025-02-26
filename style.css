@@ -1,0 +1,217 @@
+/* poppins-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/poppins-v22-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/poppins-v22-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --main-bg: #fafafa;
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+
+  --card-bg: hsl(0, 0%, 100%);
+  --dark-text: hsl(234, 12%, 34%);
+  --light-text: hsl(212, 6%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background: var(--main-bg);
+  color: var(--light-text);
+}
+
+.feature {
+  display: grid;
+  gap: 60px;
+  padding-block: 56px;
+}
+
+.wrapper {
+  width: calc(100% - 3.813rem);
+  margin-inline: auto;
+}
+
+.feature__wrapper-title {
+  max-width: 540px;
+  text-align: center;
+  display: grid;
+  gap: 16px;
+}
+
+.feature__title {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.16rem + 1.45vw, 2.25rem);
+  font-weight: 200;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+  color: var(--dark-text);
+}
+
+.feature__title span {
+  font-weight: 600;
+}
+
+.feature__description {
+  font-size: 0.938rem;
+  line-height: 1.4;
+}
+
+.feature__layout-grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 32px;
+}
+
+.feature__card {
+  display: grid;
+  gap: 32px;
+  padding: 32px;
+  border-radius: 8px;
+  border-top: 4px solid;
+  background: var(--card-bg);
+  box-shadow: 0 15px 30px -11px hsl(215, 50%, 67%, 0.5);
+}
+
+.border-top-cyan {
+  border-color: var(--clr-cyan);
+}
+.border-top-red {
+  border-color: var(--clr-red);
+}
+.border-top-orange {
+  border-color: var(--clr-orange);
+}
+.border-top-blue {
+  border-color: var(--clr-blue);
+}
+
+.feature__card-text {
+  display: grid;
+  gap: 6px;
+}
+
+.feature__card-text > h2 {
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.feature__card-text > p {
+  font-size: 0.813rem;
+  line-height: 1.6;
+  letter-spacing: 0.09px;
+  color: var(--light-text);
+}
+
+.feature__card-image {
+  margin-left: auto;
+}
+
+@media (min-width: 600px) {
+  .feature {
+    gap: 74px;
+    padding-block: 80px;
+  }
+
+  .feature__card-wrapper {
+    max-width: 640px;
+  }
+
+  .feature__layout-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      '. one one .'
+      'two two three three'
+      '. four four .';
+    gap: 32px;
+    justify-items: center;
+  }
+
+  .feature__layout-grid > :nth-child(1) {
+    grid-area: one;
+  }
+
+  .feature__layout-grid > :nth-child(2) {
+    grid-area: two;
+  }
+
+  .feature__layout-grid > :nth-child(3) {
+    grid-area: three;
+  }
+
+  .feature__layout-grid > :nth-child(4) {
+    grid-area: four;
+  }
+}
+
+@media (min-width: 900px) {
+  .feature {
+    gap: 74px;
+    padding-block: 102px;
+  }
+
+  .feature__card-wrapper {
+    max-width: 1114px;
+  }
+
+  .feature__layout-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      '. two .'
+      'one two four'
+      'one three four'
+      '. three .';
+    gap: 32px;
+  }
+
+  .feature__layout-grid > :nth-child(1) {
+    grid-area: one;
+  }
+
+  .feature__layout-grid > :nth-child(2) {
+    grid-area: two;
+  }
+
+  .feature__layout-grid > :nth-child(3) {
+    grid-area: three;
+  }
+
+  .feature__layout-grid > :nth-child(4) {
+    grid-area: four;
+  }
+}
