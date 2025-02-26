@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-four-card-feature-section-using-css-grid-D24OO501w3)
 - Live Site URL: [Add live site URL here](https://ornate-profiterole-ba9607.netlify.app/)
 
 ## My process
